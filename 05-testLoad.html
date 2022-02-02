@@ -51,54 +51,54 @@
       const article2Heading = document.querySelector("article:nth-child(2) h3");
       const article2Content = document.querySelector("article:nth-child(2) p");
 
-      title.textContent = "Billeder";
-
-      article1Heading.textContent = "Arkitektur";
-      article1Content.textContent = "Bygninger skaber rum";
-
-      article2Heading.textContent = "Et andet billede";
-      article2Content.textContent = "Dame går med hund";
-
-      img1.scr = "DSC02831.JPG";
-      img1.alt = "noget tekst";
-
-      let mainSection = document.querySelector("section");
-
-      //NYT ARTICLE ELEMENT
-      let newArticle = document.createElement("article");
-      //NYT H3 ELEMENT
-      let overskrift = document.createElement("h3");
-      //TEKST TIL OVERSKRIFT
-      let overskriftTekst = document.createTextNode("Artikel 3");
-      //INDSÆT TEKST I OVERSKRIFT
-      overskrift.appendChild(overskriftTekst);
-
-      //NYT P ELEMENT
-      let p = document.createElement("p");
-      //TEKST TIL P
-      let pTekst = document.createTextNode(
-        "noget mere tekst til tredje artikel"
-      );
-      //INDSÆT TEKST I tekst(?)
-      p.appendChild(pTekst);
-
-      //NYT IMG ELEMENT
-      let billede3 = document.createElement("img");
-      //TEKST TIL OVERSKRIFT
-      billede3.src = "DSC02831.JPG";
-
-      //TILFØJ BILLEDE TIL ARTICLE
-      newArticle.appendChild(billede3);
-      //TILFØJ OVERSKRIFT TIL ARTICLE
-      newArticle.appendChild(overskrift);
-      //TILFØJ ARTICLE TIL SECTION
-      mainSection.appendChild(newArticle);
-      //TILFØJ TEKST TIL ARTICLE
-      newArticle.appendChild(p);
-
       document.addEventListener("DOMContentLoaded", start);
       function start() {
         console.log("dom er loaded");
+
+        title.textContent = "Billeder";
+
+        article1Heading.textContent = "Arkitektur";
+        article1Content.textContent = "Bygninger skaber rum";
+
+        article2Heading.textContent = "Et andet billede";
+        article2Content.textContent = "Dame går med hund";
+
+        img1.scr = "DSC02831.JPG";
+        img1.alt = "noget tekst";
+
+        let mainSection = document.querySelector("section");
+
+        //NYT ARTICLE ELEMENT
+        let newArticle = document.createElement("article");
+        //NYT H3 ELEMENT
+        let overskrift = document.createElement("h3");
+        //TEKST TIL OVERSKRIFT
+        let overskriftTekst = document.createTextNode("Artikel 3");
+        //INDSÆT TEKST I OVERSKRIFT
+        overskrift.appendChild(overskriftTekst);
+
+        //NYT P ELEMENT
+        let p = document.createElement("p");
+        //TEKST TIL P
+        let pTekst = document.createTextNode(
+          "noget mere tekst til tredje artikel"
+        );
+        //INDSÆT TEKST I tekst(?)
+        p.appendChild(pTekst);
+
+        //NYT IMG ELEMENT
+        let billede3 = document.createElement("img");
+        //TEKST TIL OVERSKRIFT
+        billede3.src = "DSC02831.JPG";
+
+        //TILFØJ BILLEDE TIL ARTICLE
+        newArticle.appendChild(billede3);
+        //TILFØJ OVERSKRIFT TIL ARTICLE
+        newArticle.appendChild(overskrift);
+        //TILFØJ ARTICLE TIL SECTION
+        mainSection.appendChild(newArticle);
+        //TILFØJ TEKST TIL ARTICLE
+        newArticle.appendChild(p);
       }
     </script>
   </body>
