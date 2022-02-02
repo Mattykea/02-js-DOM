@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="html-struktur.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header><h1>Titel</h1></header>
+    <main>
+      <h2>Undertitel</h2>
+      <section>
+        <article>
+          <img src="DSC02833.JPG" alt="" />
+          <h3>Article 1</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+            eveniet beatae perspiciatis sapiente ex ipsam quo temporibus a ipsa
+            dolorem.
+          </p>
+        </article>
+        <article>
+          <img src="https://placeimg.com/401/300/any" alt="" />
+          <h3>Article 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, eos
+            laboriosam illo dolorum ea sequi delectus fugiat voluptatem
+            reiciendis molestiae?
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer><p>This is the footer</p></footer>
+    <script>
+      const title = document.querySelector("header h1");
+      const article1 = document.querySelector("article:nth-child(1)");
+      const article2 = document.querySelector("article:nth-child(2)");
+
+      console.log(article1);
+      console.log(article2);
+
+      const img1 = document.querySelector("article:nth-child(1) img");
+      const img2 = document.querySelector("article:nth-child(2) img");
+      console.log(img1);
+
+      const article1Heading = document.querySelector("article:nth-child(1) h3");
+      const article1Content = document.querySelector("article:nth-child(1) p");
+
+      const article2Heading = document.querySelector("article:nth-child(2) h3");
+      const article2Content = document.querySelector("article:nth-child(2) p");
+
+      document.addEventListener("DOMContentLoaded", start);
+      function start() {
+        console.log("dom er loaded");
+
+        title.textContent = "Billeder";
+
+        article1Heading.textContent = "Arkitektur";
+        article1Content.textContent = "Bygninger skaber rum";
+
+        article2Heading.textContent = "Et andet billede";
+        article2Content.textContent = "Dame går med hund";
+
+        img1.scr = "DSC02831.JPG";
+        img1.alt = "noget tekst";
+
+        let mainSection = document.querySelector("section");
+
+        //NYT ARTICLE ELEMENT
+        let newArticle = document.createElement("article");
+        //NYT H3 ELEMENT
+        let overskrift = document.createElement("h3");
+        //TEKST TIL OVERSKRIFT
+        let overskriftTekst = document.createTextNode("Artikel 3");
+        //INDSÆT TEKST I OVERSKRIFT
+        overskrift.appendChild(overskriftTekst);
+
+        //NYT P ELEMENT
+        let p = document.createElement("p");
+        //TEKST TIL P
+        let pTekst = document.createTextNode(
+          "noget mere tekst til tredje artikel"
+        );
+        //INDSÆT TEKST I tekst(?)
+        p.appendChild(pTekst);
+
+        //NYT IMG ELEMENT
+        let billede3 = document.createElement("img");
+        //TEKST TIL OVERSKRIFT
+        billede3.src = "DSC02831.JPG";
+
+        //TILFØJ BILLEDE TIL ARTICLE
+        newArticle.appendChild(billede3);
+        //TILFØJ OVERSKRIFT TIL ARTICLE
+        newArticle.appendChild(overskrift);
+        //TILFØJ ARTICLE TIL SECTION
+        mainSection.appendChild(newArticle);
+        //TILFØJ TEKST TIL ARTICLE
+        newArticle.appendChild(p);
+
+        img2.addEventListener("click", skiftBillede);
+      }
+
+      function skiftBillede() {
+        console.log("nyt billede");
+        let tal = Math.round(Math.random() * 10);
+        img2.src = "https://placeimg.com/400/300/arch?t=" + tal;
+      }
+    </script>
+  </body>
+</html>
