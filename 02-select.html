@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="html-struktur.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header><h1>Titel</h1></header>
+    <main>
+      <h2>Undertitel</h2>
+      <section>
+        <article>
+          <img src="https://placeimg.com/400/300/any" alt="" />
+          <h3>Article 1</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+            eveniet beatae perspiciatis sapiente ex ipsam quo temporibus a ipsa
+            dolorem.
+          </p>
+        </article>
+        <article>
+          <img src="https://placeimg.com/401/300/any" alt="" />
+          <h3>Article 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, eos
+            laboriosam illo dolorum ea sequi delectus fugiat voluptatem
+            reiciendis molestiae?
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer><p>This is the footer</p></footer>
+    <script>
+      const headtitle = document.querySelector("header h1");
+      console.log(headtitle);
+
+      const under = document.querySelector("h2");
+      console.log(under);
+
+      /*const artikel1 = document.querySelector("article");
+      console.log(artikel1);
+
+      const artikel2 = document.querySelector("article:nth-child(2)");
+      console.log(artikel2);*/
+
+      const artikel1 = document.querySelector("article");
+      console.log(artikel1);
+
+      const artikel2 = document.querySelector("article + article");
+      console.log(artikel2);
+
+      const footer = document.querySelector("footer");
+      console.log(footer);
+    </script>
+  </body>
+</html>
